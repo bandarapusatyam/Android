@@ -32,13 +32,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="https://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg"
+        android:text="https://upload.wikimedia.org/wikipedia/commons/e/e0/Long_March_2D_launching_VRSS-1.jpg"
         android:singleLine="true" />
-    <!-- android:text="https://www.planwallpaper.com/static/images/desktop-year-of-the-tiger-images-wallpaper.jpg"
-android:text="https://upload.wikimedia.org/wikipedia/commons/e/e0/Long_March_2D_launching_VRSS-1.jpg"
-android:text="https://upload.wikimedia.org/wikipedia/commons/9/9d/Gavarnie_recti_small_Wikimedia_Commons.jpg"
-http://www.androiddesignpatterns.com/2013/01/inner-class-handler-memory-leak.html
-    -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
