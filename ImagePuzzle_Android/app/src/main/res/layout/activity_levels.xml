@@ -1,0 +1,39 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashscreen"
+    tools:context="bandarapu.satyam.imagepuzzle.LevelsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:text="Select level"
+            android:layout_gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="30dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="50dp"
+            android:textColor="#FFF1D20C"
+            android:fontFamily="Times New Roman"
+            android:textStyle="bold"
+            android:textSize="58dp" />
+        <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/gridView"
+            android:numColumns="3"
+            android:choiceMode="singleChoice"
+            android:horizontalSpacing="50dp"
+            android:verticalSpacing="60dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="25dp"/>
+    </LinearLayout>
+
+</FrameLayout>

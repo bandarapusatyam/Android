@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'satyamandroidkey'
+            keyPassword 'krithika'
+            storeFile file('/Users/satyam/Desktop/androidApps/ImagePuzzle_Android/keystores/androidstore.jks')
+            storePassword 'krithika'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "bandarapu.satyam.imagepuzzle"
+        minSdkVersion 11
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def appName = parent.name
+                    appName = appName.replace("_Android", "-"+defaultConfig.versionName)
+                    def fileName = appName + "-" +variant.buildType.name +".apk"
+                    output.outputFile = new File(output.outputFile.parent, fileName)
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+}
